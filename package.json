@@ -1,0 +1,41 @@
+{
+	"name": "babel-plugin-remove-template-literals-whitespace",
+	"version": "0.1.0",
+	"description": "Babel plugin for whitespace removal from template literals.",
+	"main": "src/index.js",
+	"files": [
+		"index.js",
+		"src/*.js"
+	],
+	"scripts": {
+		"lint": "npx eslint src/index.js",
+		"lint:fix": "npx eslint src/index.js --fix",
+		"test": "npx jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/oliverfindl/babel-plugin-remove-template-literals-whitespace.git"
+	},
+	"keywords": [
+		"babel",
+		"babel-plugin",
+		"template-literals",
+		"remove-whitespace",
+		"remove-template-literals-whitespace",
+		"babel-plugin-remove-template-literals-whitespace"
+	],
+	"author": "Oliver Findl",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/oliverfindl/babel-plugin-remove-template-literals-whitespace/issues"
+	},
+	"homepage": "https://github.com/oliverfindl/babel-plugin-remove-template-literals-whitespace#readme",
+	"dependencies": {
+		"@babel/helper-plugin-utils": "^7.0.0"
+	},
+	"devDependencies": {
+		"babel-plugin-tester": "^7.0.2",
+		"eslint": "^6.6.0",
+		"jest": "^24.9.0"
+	}
+}
