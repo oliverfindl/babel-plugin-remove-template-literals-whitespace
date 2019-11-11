@@ -1,6 +1,6 @@
 {
 	"name": "babel-plugin-remove-template-literals-whitespace",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"description": "Babel plugin for whitespace removal from template literals.",
 	"main": "src/index.js",
 	"files": [
