@@ -42,8 +42,8 @@ module.exports = declare(({ assertVersion }, options = {}, dirname = "") => {
 					const { value } = elem;
 					const { raw, cooked } = value;
 
-					value.raw = fn(raw);
-					value.cooked = fn(cooked);
+					value.raw = fn.call(null, raw);
+					value.cooked = fn.call(null, cooked);
 
 					if(options.verbose) {
 						console.table([{
