@@ -1,7 +1,7 @@
 "use strict";
 
 const { resolve } = require("path");
-const pluginTester = require("babel-plugin-tester");
+const pluginTester = require("babel-plugin-tester/pure").default;
 
 const pluginPath = resolve(__dirname, "../src");
 const fixturesPath = resolve(__dirname, "fixtures");
