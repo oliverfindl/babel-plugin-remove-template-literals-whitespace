@@ -34,8 +34,8 @@
 		"@babel/helper-plugin-utils": "^7.0.0"
 	},
 	"devDependencies": {
-		"babel-plugin-tester": "^7.0.2",
-		"eslint": "^6.6.0",
+		"babel-plugin-tester": "^8.0.0",
+		"eslint": "^6.7.0",
 		"jest": "^24.9.0"
 	}
 }
