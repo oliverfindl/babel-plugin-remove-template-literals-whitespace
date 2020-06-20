@@ -25,9 +25,7 @@ module.exports = declare(({ assertVersion }, options = {}, dirname = "") => {
 	assertVersion(REQUIRED_BABEL_VERSION);
 
 	// eslint-disable-next-line no-cond-assign
-	if((options.verbose = !!options.verbose) && !("table" in console)) {
-		throw new Error("`console.table` not supported!");
-	}
+	if((options.verbose = !!options.verbose) && !("table" in console)) throw new Error("`console.table` not supported!");
 
 	const fn = typeof options.fn === "function" ? options.fn : removeWhitespace;
 
@@ -35,8 +33,7 @@ module.exports = declare(({ assertVersion }, options = {}, dirname = "") => {
 		name: "remove-template-literals-whitespace",
 		visitor: {
 			TemplateLiteral: path => {
-				const { node } = path;
-				const { quasis } = node;
+				const { node: { quasis } } = path;
 
 				for(const elem of quasis) {
 					const { value } = elem;
@@ -45,17 +42,15 @@ module.exports = declare(({ assertVersion }, options = {}, dirname = "") => {
 					value.raw = fn.call(null, raw);
 					value.cooked = fn.call(null, cooked);
 
-					if(options.verbose) {
-						console.table([{
-							value: "raw",
-							before: raw,
-							after: value.raw
-						}, {
-							value: "cooked",
-							before: cooked,
-							after: value.cooked
-						}]);
-					}
+					options.verbose && console.table([{
+						value: "raw",
+						before: raw,
+						after: value.raw
+					}, {
+						value: "cooked",
+						before: cooked,
+						after: value.cooked
+					}]);
 				}
 			}
 		}
