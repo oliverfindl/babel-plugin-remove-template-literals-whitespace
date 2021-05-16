@@ -7,7 +7,7 @@
 
 Babel plugin for whitespace removal from template literals.
 
-> Custom whitespace removal function can be defined via `options.fn`.
+> User-defined function for whitespace removal can be defined via `options.fn`.
 
 ---
 
@@ -24,6 +24,14 @@ or using yarn:
 ```bash
 $ yarn add babel-plugin-remove-template-literals-whitespace --dev
 ```
+
+### Options
+
+* **`options.fn`:**  
+User-defined function for whitespace removal (or whatever user wants to remove) from template literals.
+
+* **`options.verbose`:**  
+Enables verbose mode, that will log template literals before and after whitespace removal process.
 
 ---
 
